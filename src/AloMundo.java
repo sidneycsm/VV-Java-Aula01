@@ -10,8 +10,7 @@ public class AloMundo {
 
 		// int codigoPedido = 10;
 		// int valorA = 10;
-		// int valorMod = 2;
-		// int resultado = valorDigitado % valorMod;
+		// int valorMod = 2; // int resultado = valorDigitado % valorMod;
 		// BigDecimal valor = BigDecimal.TEN;
 		// System.out.println("Ola Mundo");
 		// System.out.println(codigoPedido);
@@ -73,7 +72,9 @@ public class AloMundo {
 		//	break;
 		//}
 		//}
+		/*
 		System.out.println("Informe o número do pedido: ");
+		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);
 		int codigoDifitado = Integer.valueOf(scanner.next());
 		
@@ -81,5 +82,14 @@ public class AloMundo {
 		pedido.setCodigo(codigoDifitado);
 		
 		System.out.println("Pedido informado é: "+pedido.getCodigo());
+	*/
+	
+	
+		MinhaThread1 t1 = new MinhaThread1();
+		MinhaThread2 t2 = new MinhaThread2();
+		
+		new Thread(t1).start();
+		new Thread(t2).start();
+		//t1.destroy();
 	}
 }
